@@ -101,8 +101,8 @@ function place_tile(player, x, y, tile) {
 		if (is_move_legal(x, y, tile)) {
 			move_list.push({
 				'player': player,
-				'x': x,
-				'y': y,
+				'x': (x - 1),
+				'y': (y - 1),
 				'tile': tile
 			});
 			current_board[x][y] = player.toString() + tile;
