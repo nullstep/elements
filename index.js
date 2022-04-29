@@ -26,6 +26,10 @@ var board_size = 0;
 
 // routing
 
+app.get('/', (req, res) => {
+    res.sendFile('./index.html', { root: __dirname });
+});
+
 app.get('/get_board', (req, res) => {
 	output = current_board;
 	res.send(output);
